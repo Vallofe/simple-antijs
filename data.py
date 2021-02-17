@@ -94,7 +94,7 @@ class commands(threading.Thread):
                     for _mid in self.stats['bots']:
                         good.append(_mid)
                     for _mid in self.stats['owners']:
-                        good.append(_mi)
+                        good.append(_mid)
                     self.client.inviteIntoGroup(kickgroup, good)
                 except TalkException as merror:
                     if merror.code == 10:
@@ -123,7 +123,7 @@ class commands(threading.Thread):
                     for _mid in self.stats['bots']:
                         good.append(_mid)
                     for _mid in self.stats['owners']:
-                        good.append(_mi)
+                        good.append(_mid)
                     self.client.inviteIntoGroup(kickgroup, good)
                 except TalkException as merror:
                     if merror.code == 10:
