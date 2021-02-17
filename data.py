@@ -11,7 +11,6 @@ class commands(threading.Thread):
         self.uid = uid
         self.db = livejson.File("database/%s.json"%fileName, True, True, 4)
         self.master = ["YOUR_MID"]
-        self.invites = []
         self.settings = {
             "protect": False,
             "rname": fileName,
