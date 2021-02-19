@@ -102,11 +102,11 @@ class commands(threading.Thread):
                     elif merror.code == 35:
                         print("LIMIT NJIIR")
                         gc = self.client.getCompactGroup(kickgroup)
-                        if x.preventedJoinByTicket == True:
-                            x.preventedJoinByTicket = False
+                        if gc.preventedJoinByTicket == True:
+                            gc.preventedJoinByTicket = False
                             if links == True:
-                                g.preventedJoinByTicket = False
-                                self.client.updateGroup(g)
+                                gc.preventedJoinByTicket = False
+                                self.client.updateGroup(gc)
                             link = self.client.reissueGroupTicket(kickgroup)
                             for ang in self.stats['bots']:
                                 self.client.sendMessage(ang, "%s %s" % (kickgroup, link))
@@ -131,11 +131,11 @@ class commands(threading.Thread):
                     elif merror.code == 35:
                         print("LIMIT NJIIR")
                         gc = self.client.getCompactGroup(kickgroup)
-                        if x.preventedJoinByTicket == True:
-                            x.preventedJoinByTicket = False
+                        if gc.preventedJoinByTicket == True:
+                            gc.preventedJoinByTicket = False
                             if links == True:
-                                g.preventedJoinByTicket = False
-                                self.client.updateGroup(g)
+                                gc.preventedJoinByTicket = False
+                                self.client.updateGroup(gc)
                             link = self.client.reissueGroupTicket(kickgroup)
                             for ang in self.stats['bots']:
                                 self.client.sendMessage(ang, "%s %s" % (kickgroup, link))
